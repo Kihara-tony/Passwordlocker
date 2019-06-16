@@ -1,17 +1,17 @@
 import unittest
 import pyperclip
 from user import User,Credential
-# class TestUser(unittest.TestCase):
-# 	'''
-# 	Test class that user behaviours
-# 	Args:
-# 	     unittest.TestCase:helps in creating test cases
-# 	'''
-# 	def setUp(self):
-# 		'''
-# 		Function to create a user account
-# 		'''
-# 		self.new_user = User('Tony','Kihara','tnkz000')
+class TestUser(unittest.TestCase):
+	'''
+	Test class that user behaviours
+	Args:
+	     unittest.TestCase:helps in creating test cases
+	'''
+	def setUp(self):
+		'''
+		Function to create a user account
+		'''
+		self.new_user = User('Tony','Kihara','tnkz000')
 # 	def test__init__(self):
 # 		'''
 # 		Test to if check the initialization of user instances is done properly
