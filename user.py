@@ -24,24 +24,14 @@ class Credential:
     '''
     credentials_list =[]
     user_credentials_list = []
-    @classmethod
-    def check_user(cls,first_name,password):
+    def __init__(self,user_name,site_name,account_name,password):
         '''
-        Method  that checks if the name and password entered match entries
+        Method to define the properties for each userobject holds
         '''
-        current_user = ''
-        for user in User.users_list:
-            if(user.first_name == first_name and user.password == password):
-                current_user = user.first_name
-        return current_user
-#     def __init__(self,user_name,site_name,account_name,password):
-#         '''
-#         Method to define the properties for each userobject holds
-#         '''
-#         self.user_name = user_name
-#         self.site_name = site_name
-#         self.account_name = account_name
-#         self.password = password
+        self.user_name = user_name
+        self.site_name = site_name
+        self.account_name = account_name
+        self.password = password
 #     def save_credentials(self):
 #         '''
 #         Function to save a newly created user instance
