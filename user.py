@@ -1,11 +1,11 @@
 import pyperclip
 import string
 import random
-# class User:
-#     '''
-#     Class to create user accounts and save their credentials
-#     '''
-#     users_list = []
+class User:
+    '''
+    Class to create user accounts and save their credentials
+    '''
+    users_list = []
 #     def __init__(self,first_name,last_name,password):
 #         '''
 #         Methods to define each user object properties
