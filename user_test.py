@@ -27,12 +27,12 @@ class TestUser(unittest.TestCase):
 		self.new_user.save_user()
 		self.assertEqual(len(User.users_list),1)
 
-# class TestCredintials(unittest.TestCase):
-# 	'''
-# 	Test class that defines test cases
-# 	Args:
-# 	     unittest.TestCase:helps in creating test cases
-# 	'''
+class TestCredintials(unittest.TestCase):
+	'''
+	Test class that defines test cases
+	Args:
+	     unittest.TestCase:helps in creating test cases
+	'''
 
 # 	def test_check_user(self):
 # 		'''
