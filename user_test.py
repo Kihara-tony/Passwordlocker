@@ -61,14 +61,14 @@ class TestCredintials(unittest.TestCase):
 		self.assertEqual(self.new_credential.site_name,'Facebook')
 		self.assertEqual(self.new_credential.account_name,'tonkin')
 		self.assertEqual(self.new_credential.password,'tnkz000')
-# 	def test_save_credentials(self):
-# 		'''
-# 		Test to check if the new credentials are  saved
-# 		'''
-# 		self.new_credential.save_credentials()
-# 		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
-# 		twitter.save_credentials()
-# 		self.assertEqual(len(Credential.credentials_list),2)
+	def test_save_credentials(self):
+		'''
+		Test to check if the new credentials are  saved
+		'''
+		self.new_credential.save_credentials()
+		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
+		twitter.save_credentials()
+		self.assertEqual(len(Credential.credentials_list),2)
 # 	def test_delete_credentials(self):
 # 		'''
 # 		Test to check if the saved credentials are deleted
