@@ -34,14 +34,14 @@ class TestCredintials(unittest.TestCase):
 	     unittest.TestCase:helps in creating test cases
 	'''
 
-# 	def test_check_user(self):
-# 		'''
-# 		Function to test whether the login in function works
-# 		'''
-# 		self.new_user = User('Tony','Kihara','tnkz000')
-# 		self.new_user.save_user()
-# 		user2 = User('Poul','Njenga','tnkz000')
-# 		user2.save_user()
+	def test_check_user(self):
+		'''
+		Function to test whether the login in function works
+		'''
+		self.new_user = User('Tony','Kihara','tnkz000')
+		self.new_user.save_user()
+		user2 = User('Poul','Njenga','tnkz000')
+		user2.save_user()
 
 # 		for user in User.users_list:
 # 			if user.first_name == user2.first_name and user.password == user2.password:
