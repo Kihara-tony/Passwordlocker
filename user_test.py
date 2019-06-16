@@ -77,12 +77,12 @@ class TestCredintials(unittest.TestCase):
 		twitter =Credential('Tony','Twitter','tonkin','tnkz000')
 		twitter.delete_credentials()
 		self.assertEqual(remove(Credential.credentials_list),2)
-# 	def tearDown(self):
-# 		'''
-# 		Function to clear the credentials list after every test
-# 		'''
-# 		Credential.credentials_list = []
-# 		User.users_list = []
+	def tearDown(self):
+		'''
+		Function to clear the credentials list after every test
+		'''
+		Credential.credentials_list = []
+		User.users_list = []
 # 	def test_display_credentials(self):
 # 		'''
 # 		Test to check if the display_credentials method, displays the correct credentials
