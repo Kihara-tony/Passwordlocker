@@ -32,11 +32,11 @@ class Credential:
         self.site_name = site_name
         self.account_name = account_name
         self.password = password
-#     def save_credentials(self):
-#         '''
-#         Function to save a newly created user instance
-#         '''
-#         Credential.credentials_list.append(self)
+    def save_credentials(self):
+        '''
+        Function to save a newly created user instance
+        '''
+        Credential.credentials_list.append(self)
 #     def delete_credentials(self):
 #         '''
 #         Function to delete saved credentials
