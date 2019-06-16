@@ -36,6 +36,11 @@ def save_credential(credential):
 	Function to save a newly created credential
 	'''
 	Credential.save_credentials(credential)
+def delete_credential(credential):
+	'''
+	Function to delete saved credentials
+	'''
+	Credential.delete_credentials(credential)
 def display_credentials(user_name):
 	'''
 	Function to display credentials saved by a user
@@ -52,11 +57,11 @@ def main():
 	while True:
 		print(' ')
 		print("-"*60)
-		print('Use the choices to navigate:\n c-To Create An Account \n l-To Log In To Your Account \n x-To Exit')
+		print('Use the choices to navigate:\n ca-To Create An Account \n l-To Log In To Your Account  \n x-To Exit')
 		short_code = input('Choose: ').lower().strip()
 		if short_code == 'x':
 			break
-		elif short_code == 'c':
+		elif short_code == 'ca':
 			print("-"*60)
 			print(' ')
 			print('To create a new account')
@@ -66,6 +71,8 @@ def main():
 			save_user(create_user(first_name,last_name,password))
 			print(' ')
 			print(f'A New Account Was Created For {first_name} {last_name} using password {password}')
+		
+		
 		elif short_code == 'l':
 			print("-"*60)
 			print(' ')
@@ -79,12 +86,12 @@ def main():
 				print(' ')
 				while True:
 					print("-"*60)
-					print('Navigate By: \n c-To Create A Credential \n d-To Display Credentials \n c-To Copy Password \n x- To Exit')
+					print('Navigate By: \n c-To Create A Credential \n d-To Display Credentials \n del-To Delete An Account \n c-To Copy Password \n x- To Exit')
 					short_code = input('Enter A Choice: ').lower().strip()
 					print("-"*60)
 					if short_code == 'x':
 						print(" ")
-						print(f'Goodbye {user_name} hope to see you soon \n It was nice interacting with you dear Friend.')
+						print(f'Goodbye {user_name} hope to see you soon \n It was nice interacting with you dear {user_name}.')
 						break
 					elif short_code == 'c':
 						print(' ')

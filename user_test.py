@@ -42,7 +42,7 @@ class TestCredintials(unittest.TestCase):
 		self.new_user.save_user()
 		user2 = User('Poul','Njenga','tnkz000')
 		user2.save_user()
-		
+
 		for user in User.users_list:
 			if user.first_name == user2.first_name and user.password == user2.password:
 				current_user = user.first_name
@@ -69,6 +69,14 @@ class TestCredintials(unittest.TestCase):
 		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
+	def test_delete_credentials(self):
+		'''
+		Test to check if the saved credentials are deleted
+		'''
+		self.new_credential.delete_credentials()
+		twitter =Credential('Tony','Twitter','tonkin','tnkz000')
+		twitter.delete_credentials()
+		self.assertEqual(remove(Credential.credentials_list),2)
 	def tearDown(self):
 		'''
 		Function to clear the credentials list after every test
