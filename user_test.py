@@ -83,16 +83,16 @@ class TestCredintials(unittest.TestCase):
 		'''
 		Credential.credentials_list = []
 		User.users_list = []
-# 	def test_display_credentials(self):
-# 		'''
-# 		Test to check if the display_credentials method, displays the correct credentials
-# 		'''
-# 		self.new_credential.save_credentials()
-# 		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
-# 		twitter.save_credentials()
-# 		gmail = Credential('Mary','Gmail','Virginmary','tnkz000')	
-# 		gmail.save_credentials()
-# 		self.assertEqual(len(Credential.display_credentials(twitter.user_name)),2)
+	def test_display_credentials(self):
+		'''
+		Test to check if the display_credentials method, displays the correct credentials
+		'''
+		self.new_credential.save_credentials()
+		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
+		twitter.save_credentials()
+		gmail = Credential('Mary','Gmail','Virginmary','tnkz000')	
+		gmail.save_credentials()
+		self.assertEqual(len(Credential.display_credentials(twitter.user_name)),2)
 # 	def test_find_by_site_name(self):
 # 		'''
 # 		Test to check if the find_by_site_name method returns the correct credential
