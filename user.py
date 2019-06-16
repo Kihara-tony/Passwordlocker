@@ -18,12 +18,12 @@ class User:
         Function to save a new user
         '''
         User.users_list.append(self)
-# class Credential:
-#     '''
-#     Class to create a password account,generate password and save
-#     '''
-#     credentials_list =[]
-#     user_credentials_list = []
+class Credential:
+    '''
+    Class to create a password account,generate password and save
+    '''
+    credentials_list =[]
+    user_credentials_list = []
 #     @classmethod
 #     def check_user(cls,first_name,password):
 #         '''
