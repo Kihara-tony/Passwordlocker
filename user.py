@@ -13,11 +13,11 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.password = password
-#     def save_user(self):
-#         '''
-#         Function to save a new user
-#         '''
-#         User.users_list.append(self)
+    def save_user(self):
+        '''
+        Function to save a new user
+        '''
+        User.users_list.append(self)
 # class Credential:
 #     '''
 #     Class to create a password account,generate password and save
