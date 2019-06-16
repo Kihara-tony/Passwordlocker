@@ -93,16 +93,16 @@ class TestCredintials(unittest.TestCase):
 		gmail = Credential('Mary','Gmail','Virginmary','tnkz000')	
 		gmail.save_credentials()
 		self.assertEqual(len(Credential.display_credentials(twitter.user_name)),2)
-# 	def test_find_by_site_name(self):
-# 		'''
-# 		Test to check if the find_by_site_name method returns the correct credential
-# 		'''
-# 		self.new_credential.save_credentials()
-# 		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
-# 		twitter.save_credentials()
-# 		credential_exists = Credential.find_by_site_name('Twitter')
-# 		self.assertEqual(credential_exists,twitter)
-# 	def test_copy_credential(self):
+	def test_find_by_site_name(self):
+		'''
+		Test to check if the find_by_site_name method returns the correct credential
+		'''
+		self.new_credential.save_credentials()
+		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
+		twitter.save_credentials()
+		credential_exists = Credential.find_by_site_name('Twitter')
+		self.assertEqual(credential_exists,twitter)
+	def test_copy_credential(self):
 # 		'''
 # 		Test to check if the copy a credential method copies the correct credential
 # 		'''
