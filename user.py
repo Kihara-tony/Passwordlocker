@@ -8,7 +8,7 @@ class User:
     users_list = []
     def __init__(self,first_name,last_name,password):
         '''
-        Methods to define each user object properties
+        Method to define each user object properties
         '''
         self.first_name = first_name
         self.last_name = last_name
@@ -24,6 +24,16 @@ class Credential:
     '''
     credentials_list =[]
     user_credentials_list = []
+    @classmethod
+    def check_user(cls,first_name,password):
+        '''
+        Method to check if the name and password matches the ones entered
+        '''
+        current_user = ''
+        for user in User.users_list:
+            if(user.first_name == first_name and user.password == password):
+                current_user = user.first_name
+        return current_user
     def __init__(self,user_name,site_name,account_name,password):
         '''
         Method to define the properties for each userobject holds
@@ -37,11 +47,6 @@ class Credential:
         Function to save a newly created user instance
         '''
         Credential.credentials_list.append(self)
-    def delete_credentials(self):
-        '''
-        Function to delete saved credentials
-        '''
-        Credential.credential_list.remove(self)
     def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
         '''
         Function to generate an 8 character password for a credential

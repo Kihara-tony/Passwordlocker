@@ -3,7 +3,7 @@ import pyperclip
 from user import User, Credential
 def create_user(fname,lname,password):
     '''
-    Function to create  anew account
+    Function to create  a new account
     '''
     new_user = User(fname,lname,password)
     return new_user
@@ -36,11 +36,7 @@ def save_credential(credential):
 	Function to save a newly created credential
 	'''
 	Credential.save_credentials(credential)
-def delete_credential(credential):
-	'''
-	Function to delete saved credentials
-	'''
-	Credential.delete_credentials(credential)
+
 def display_credentials(user_name):
 	'''
 	Function to display credentials saved by a user
@@ -60,6 +56,8 @@ def main():
 		print('Use the choices to navigate:\n ca-To Create An Account \n l-To Log In To Your Account  \n x-To Exit')
 		short_code = input('Choose: ').lower().strip()
 		if short_code == 'x':
+			print(' ')
+			print(f'Goodbye \n  hope to see you soon \n It was nice interacting with you dear .')
 			break
 		elif short_code == 'ca':
 			print("-"*60)
@@ -70,7 +68,7 @@ def main():
 			password = input('Input Your Password: ').strip()
 			save_user(create_user(first_name,last_name,password))
 			print(' ')
-			print(f'A New Account Was Created For {first_name} {last_name} using password {password}')
+			print(f'A New Account Was Created \n For {first_name} {last_name} \n using password {password}')
 		
 		
 		elif short_code == 'l':
@@ -78,20 +76,20 @@ def main():
 			print(' ')
 			print('To Log In Follow The Instructions: ')
 			user_name = input('Input Your First Name: ').strip()
-			password = str(input('Encript Your Password: '))
-			user_exists =verify_user(user_name,password)
+			password = str(input('Input Your Password: '))
+			user_exists = verify_user(user_name,password)
 			if user_exists == user_name:
 				print(" ")
 				print(f'Welcome {user_name}!! \n PLease Choose To Continue.')
 				print(' ')
 				while True:
 					print("-"*60)
-					print('Navigate By: \n c-To Create A Credential \n d-To Display Credentials \n del-To Delete An Account \n c-To Copy Password \n x- To Exit')
+					print('Navigate By: \n c-To Create A Credential \n d-To Display Credentials  \n cp-To Copy Password \n x- To Exit')
 					short_code = input('Enter A Choice: ').lower().strip()
 					print("-"*60)
 					if short_code == 'x':
 						print(" ")
-						print(f'Goodbye {user_name} hope to see you soon \n It was nice interacting with you dear {user_name}.')
+						print(f'Goodbye \n {user_name} hope to see you soon \n It was nice interacting with you dear {user_name}.')
 						break
 					elif short_code == 'c':
 						print(' ')
@@ -112,6 +110,8 @@ def main():
 								password = generate_password()
 								break
 							elif psw_choice == 'x':
+								print(" ")
+								print(f'Goodbye \n {user_name} hope to see you soon \n It was nice interacting with you dear {user_name}.')
 								break
 							else:
 								print('You Entered A Wrong Option!!! \n Please Try Again.')
@@ -131,7 +131,7 @@ def main():
 							print(' ')
 							print('You don\'t seem to contain any credentials saved yet' )
 							print(' ')
-					elif short_code == 'c':
+					elif short_code == 'cp':
 						print(' ')
 						choosen_site = input('To copy password \n Enter the name of the site')
 						copy_credential(choosen_site)

@@ -69,14 +69,7 @@ class TestCredintials(unittest.TestCase):
 		twitter = Credential('Tony','Twitter','tonkin','tnkz000')
 		twitter.save_credentials()
 		self.assertEqual(len(Credential.credentials_list),2)
-	def test_delete_credentials(self):
-		'''
-		Test to check if the saved credentials are deleted
-		'''
-		self.new_credential.delete_credentials()
-		twitter =Credential('Tony','Twitter','tonkin','tnkz000')
-		twitter.delete_credentials()
-		self.assertEqual(remove(Credential.credentials_list),2)
+	
 	def tearDown(self):
 		'''
 		Function to clear the credentials list after every test
@@ -111,8 +104,8 @@ class TestCredintials(unittest.TestCase):
 		twitter.save_credentials()
 		find_credential = None
 		for credential in Credential.user_credentials_list:
-			find_credential =Credential.find_by_site_name(credential.site_name)
-			return pyperclip.copy(find_credential.password)
+			      find_credential =Credential.find_by_site_name(credential.site_name)
+			      return pyperclip.copy(find_credential.password)
 		Credential.copy_credential(self.new_credential.site_name)
 		self.assertEqual('tnkz000',pyperclip.paste())
 		print(pyperclip.paste())
