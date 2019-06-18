@@ -26,7 +26,7 @@
 # BDD
 
  |Behaviour|input|output|
- |---------:|----:|-----:|
+ |:---------|:----|:-----|
  |Given Shem want to create a facebook account|When he enters the full name and password he desires|Then he should see account created|
  |Given Shem want to enter into the facebook account to check password|When he enters the account name facebook|Then he will see his password|
  |Given Shem wants to delete the facebook account|When he chooses delete account and enters the name |Then he gets account deleted|
@@ -36,7 +36,9 @@
 # CONTACT :telephone_receiver:
 
  Email:tonykiharatonkin@gmail.com
+ 
  Tel: 0748963275
+ 
  -------------------------------------
 # LIVE APP
  [app]("https://kihara-tony.github.io/Passwordlocker/")
